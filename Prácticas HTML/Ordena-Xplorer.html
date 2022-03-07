@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width-device-width, initial-scale-1.0"> 
+    <title>Pastele - Órdenes</title>
+    <script type="text/javascript"> 
+        document.onkeydown = function(){return false};
+    </script>
+    <style>
+        h1{
+            color: #356cc0;
+            text-align: center;
+        }
+        label{
+            color: aquamarine;
+            font-size:22px;
+        }
+        form,input{
+            text-align: center;
+        }
+        
+        p{
+            color:lightpink;
+            font-size: 20px;
+            font-style: italic;
+        }
+        
+    </style>
+    
+    </head>
+<body background="Space-track1.gif" oncontextmenu="return false;" onkeydown="return false">
+    <h1>Pedidos para viajar</h1>
+
+    <form action="pedido-pastel.js">
+        <label for="Nombre">Registre su nombre para el viaje de tu(s) nuevo(s) pastel(es)</label><br> <!--Nombre cliente-->
+        <input type="text" id="Nombre" name="Nombre" placeholder="Nombre">
+        <br><br><br>
+        <label for="correo">Introduzca su correo electrónico, por favor</label><br> <!--Correo cliente -->
+        <input type="email" id="correo" name="Correo" placeholder="example@email.com">
+        <br><br><br>
+        <label for="numTel">Escriba su número telefónico</label><br> <!--Num cliente-->
+        <input type="tel" id="numTel" name="numTel" maxlength="10">
+        <br><br><br>
+        <hr>
+        <p>¿Qué pastel deseas ordenar?</p>
+        <input type="checkbox" id="nebulosa" name="nebulosa" value="nebulosa"> 
+        <label for="nebulosa">Nebulosa</label> 
+        <input type="number" id="nebulosaCuantos" name "nebulosaCuantos" placeholder="¿Cuantos?"> <br>
+        
+        <input type="checkbox" id="ViaLactea" name="ViaLactea" value="ViaLactea"> 
+        <label for="ViaLactea">Vía Láctea</label> 
+        <input type="number" id="ViaLacteaCuantos" name "ViaLacteaCuantos" placeholder="¿Cuantos?"><br>
+        
+        <input type="checkbox" id="Santiago" name="Santiago" value="Santiago"> 
+        <label for="Santiago">C. Santiago</label> 
+        <input type="number" id="SantiagoCuantos" name "SantiagoCuantos" placeholder="¿Cuantos?"><br>
+        
+        <input type="checkbox" id="Rocoso" name="Rocoso" value="Rocoso"> 
+        <label for="Rocoso">Rocoso</label> 
+        <input type="number" id="RocosoCuantos" name "RocosoCuantos" placeholder="¿Cuantos?"><br>
+        
+        <input type="checkbox" id="Galaxia" name="Galaxia" value="Galaxia"> 
+        <label for="Galaxia">Galaxia</label> 
+        <input type="number" id="GalaxiaCuantos" name "GalaxiaCuantos" placeholder="¿Cuantos?"><br>
+
+        <input type="checkbox" id="Meteorito" name="Meteorito" value="Meteorito"> 
+        <label for="Meteorito">Meteorito</label> 
+        <input type="number" id="MeteoritoCuantos" name "MeteoritoCuantos" placeholder="¿Cuantos?"><br>
+        
+        <input type="checkbox" id="oceano" name="oceano" value="oceano"> 
+        <label for="oceano">Océano</label> 
+        <input type="number" id="oceanoCuantos" name "oceanoCuantos" placeholder="¿Cuantos?"><br>
+        
+        <input type="checkbox" id="Naboo" name="Naboo" value="Naboo"> 
+        <label for="Naboo">Naboo</label> 
+        <input type="number" id="NabooCuantos" name "NabooCuantos" placeholder="¿Cuantos?"><br>
+        
+        <input type="checkbox" id="Yavin" name="Yavin" value="Yavin"> 
+        <label for="Yavin">Yavin IV</label> 
+        <input type="number" id="YavinCuantos" name "YavinCuantos" placeholder="¿Cuantos?"><br>
+
+
+        <p>Describa lo mejor posible como solitará sus pasteles</p>
+        <label for="desc">Descripión:</label><br>
+        <input type="text" width="80px" height="15px" id="desc" name="desc" placeholder="Descripión de pedido">
+        <br>
+
+        <p>¿Desea agregar algún ingrediente más en todos sus pedidos?</p>
+        <select name="ingrediente" id="ingrediente">
+                <option value="Ninguno">Ninguno         </option>
+                <option value="Vainilla">Vainilla       </option>
+                <option value="Chocolate">Chocolate     </option>
+                <option value="Mermelada">Mermelada     </option>
+                <option value="Caramelo">Caramelo       </option>
+                <option value="Nutella">Nutella         </option>
+                <option value="Merengue">Merengue       </option>
+                <option value="Fresa">Fresa             </option>
+                <option value="Limón">Limón             </option>
+                <option value="Zanahoria">Zanahoria     </option>
+                <option value="Naranja">Naranja         </option>
+                <option value="Almendras">Almendras     </option>
+        </select><br><br>
+        <input type="reset">
+        <input type="submit">
+    </form>
+
+</body>
+</html>
