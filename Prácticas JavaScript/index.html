@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width-device-width, initial-scale-1.0"> 
+    <title>Pokédex-LaunchX</title>
+      
+    <link
+      rel="icon"
+      type="image/gif/jpg/png"
+      href="./pokedex-logo.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    /> 
+    <link rel="stylesheet" href="./styles.css"> 
+    </head>
+<body>
+    <div class="pokédexTrademark">
+        <img src="./pokédexTrademark.png" 
+        alt="pokédexTrademark"
+        height="100%"
+        />
+    </div>
+
+    <!-- Botón para escribir nombre/ID -->
+    <div class="buscador">
+        <input type="text" placeholder="Pokémon Name / ID" id ="PokeName" />
+
+    <!-- Bóton forma de Pokébola para buscar Pokémon -->
+        <div id="btn-buscador" class="Pokeball" >
+            <img src="pokeball.png" width="100%">
+        </div>
+    </div>
+
+    <!-- Contenedor para paneles pokedex -->
+    <div id="pokedex">
+        <!-- Panel izq -->
+        <div id="panel-izq">
+          <!-- Top lights -->
+          <div class="left-top-container">
+            <svg height="100" width="225" class="left-svg">
+              <polyline
+                points="0,75 70,75 90,38 224,38"
+                style="fill: none; stroke: black; stroke-width: 3"
+              />
+            </svg>
+            <div class="lights-container">
+              <div class="big-light-boarder">
+                <div class="big-light azul">
+                  <div class="big-gota-ref azul-claro"></div>
+                </div>
+              </div>
+              <div class="small-lights-container">
+                <div class="small-luz rojo">
+                  <div class="gota-ref rojo-claro"></div>
+                </div>
+                <div class="small-luz amarillo">
+                  <div class="gota-ref amarillo-claro"></div>
+                </div>
+                <div class="small-luz verde">
+                  <div class="gota-ref verde-claro"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pantalla Central -->
+          <div class="screen-container">
+            <div class="screen">
+              <div class="top-screen-lights">
+                <div class="mini-light rojo"></div>
+                <div class="mini-light rojo"></div>
+              </div>
+              <div id="pokeImg"></div>
+              <div class="bottom-screen-lights">
+                <div class="small-luz rojo">
+                  <div class="gota-ref rojo-claro"></div>
+                </div>
+                <div class="lineas">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Botones de panel izq -->
+          <div class="buttons-container">
+            <div class="upper-buttons-container">
+              <div class="big-button"></div>
+              <div class="long-buttons-container">
+                <div class="long-button red"></div>
+                <div class="long-button azul-claro"></div>
+              </div>
+            </div>
+            <div class="nav-buttons-container">
+              <div class="dots-container">
+                <div>.</div>
+                <div>.</div>
+              </div>
+              <div class="green-screen">
+                <span id="nombre-en-pantalla">?????</span>
+              </div>
+              <div class="right-nav-container">
+                <div class="nav-button">
+                  <div class="nav-center-circle"></div>
+                  <div class="nav-button-vertical"></div>
+                  <div class="nav-button-horizontal">
+                    <div class="border-top"></div>
+                    <div class="border-bottom"></div>
+                  </div>
+                </div>
+                <div class="bottom-right-nav-container">
+                  <div class="small-luz red">
+                    <div class="gota-ref rojo-claro"></div>
+                  </div>
+                  <div class="dots-container">
+                    <div class="black-gota-ref">.</div>
+                    <div class="black-gota-ref">.</div>
+                    <div class="black-gota-ref">.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Panel-izq -->
+  
+        <!-- Panel-der -->
+        <div id="panel-der">
+          <!-- parte blanca de panel -->
+          <div class="empty-container">
+            <svg height="100%" width="100%">
+              <polyline
+                points="0,0 0,40 138,40 158,75 250,75 250,0 0,0"
+                style="fill: #f2f2f2; stroke: none; stroke-width: 3"
+              />
+              <polyline
+                points="0,40 138,40 158,75 250,75"
+                style="fill: none; stroke: black; stroke-width: 3"
+              />
+            </svg>
+          </div>
+          <!-- Pantalla de información pokémon -->
+          <div class="top-screen-container">
+            <div id="info-pokémon" class="panel-der-screen">
+              Altura:??? Peso:??? PS:??? Ataque:??? Defensa:??? At-Esp:??? Def-Esp:??? Velocidad:???
+            </div>
+          </div>
+          <!-- Blue Buttons -->
+          <div class="square-buttons-container">
+            <div class="blue-squares-container">
+              <div class="cuadrito-azul"></div>
+              <div class="cuadrito-azul"></div>
+              <div class="cuadrito-azul"></div>
+              <div class="cuadrito-azul"></div>
+              <div class="cuadrito-azul"></div>
+              <div class="cuadrito-azul"></div>
+              <div class="cuadrito-azul"></div>
+              <div class="cuadrito-azul"></div>
+              <div class="cuadrito-azul"></div>
+              <div class="cuadrito-azul"></div>
+            </div>
+          </div>
+          <!-- Center Buttons -->
+          <div class="center-buttons-container">
+            <div class="center-left-container">
+              <div class="small-reds-container">
+                <div class="small-luz red">
+                  <div class="gota-ref rojo-claro"></div>
+                </div>
+                <div class="small-luz red">
+                  <div class="gota-ref rojo-claro"></div>
+                </div>
+              </div>
+              <div class="white-squares-container">
+                <div class="white-square"></div>
+                <div class="white-square"></div>
+              </div>
+            </div>
+            <div class="center-right-container">
+              <div class="thin-buttons-container">
+                <div class="thin-button"></div>
+                <div class="thin-button"></div>
+              </div>
+              <div class="yellow-button amarillo">
+                <div class="big-gota-ref amarillo-claro"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Bottom screens -->
+          <div class="bottom-screens-container">
+            <div id="pokemon-tipo" class="panel-der-screen">-----</div>
+            <div id="pokemon-ID" class="panel-der-screen">#???</div>
+          </div>
+        </div>
+      </div>
+
+<script src="./script.js"></script>
+</body>
+</html>
