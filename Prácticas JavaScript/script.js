@@ -31,9 +31,9 @@ const PokemonData = (Pokémon) => {
         let id = ('00' + data.id).slice(-3);
         pokeImg.style.backgroundImage = `url('https://assets.pokemon.com/assets/cms2/img/pokedex/full/${id}.png')`;
         nombreEnPantalla.innerHTML = data.name;
-        pokeTipo.innerHTML = data.types[0].type.name;
-        pokeID.innerHTML = `#${data.id}`;
-        infoPokemon.innerHTML = `Altura: ${data.height * 10}cm Peso:${data.weight / 10}kg 
+        pokeTipo.innerText = data.types[0].type.name;
+        pokeID.innerText = `#${data.id}`;
+        infoPokemon.innerText = `Altura: ${data.height * 10}cm Peso:${data.weight / 10}kg 
                                 HP:${data.stats[0].base_stat} Ataque:${data.stats[1].base_stat} 
                                 Defensa: ${data.stats[2].base_stat} Ataque-Esp:${data.stats[3].base_stat}
                                 Def-Esp: ${data.stats[4].base_stat} Velocidad:${data.stats[5].base_stat}`;
